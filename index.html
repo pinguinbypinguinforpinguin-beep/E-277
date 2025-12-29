@@ -33,5 +33,27 @@
     <p>Wprowadź klucz:</p>
     <input type="text" placeholder="KLUCZ">
   </div>
+  <script>
+const input = document.querySelector("input");
+
+input.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    if (input.value === "CCLXXVII") {
+      document.body.innerHTML = `
+        <div class="box">
+          <h1>RAPORT 1</h1>
+          <p>Obiekt E-277 został odkryty przypadkowo.<br>
+          Jego struktura nie odpowiada żadnej znanej formie życia.<br>
+          Obserwatorzy zgłaszają niepokój.</p>
+        </div>
+      `;
+    } else {
+      alert("BRAK AUTORYZACJI");
+      input.value = "";
+    }
+  }
+});
+</script>
+
 </body>
 </html>
