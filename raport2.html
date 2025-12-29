@@ -2,104 +2,159 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Raport 2 — E-277</title>
-<style>
-    body {
-        background-color: #000;
-        color: #cfcfcf;
-        font-family: "Courier New", monospace;
-        padding: 40px;
-    }
-    h1, h2 {
-        color: #00ffcc;
-    }
-    .meta {
-        font-size: 0.9em;
-        color: #888;
-        margin-bottom: 30px;
-    }
-    .locked {
-        margin-top: 50px;
-        padding-top: 20px;
-        border-top: 1px solid #333;
-    }
-    input {
-        background: black;
-        color: #00ffcc;
-        border: 1px solid #00ffcc;
-        padding: 6px;
-        font-family: inherit;
-    }
-</style>
-</head>
+<title>E-277 — dokumentacja</title>
 
+<style>
+body {
+    background-color: #000;
+    color: #cfcfcf;
+    font-family: "Courier New", monospace;
+    padding: 40px;
+}
+
+h1, h2 {
+    color: #00ffcc;
+}
+
+.box {
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+input, button {
+    background: #000;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    padding: 6px;
+    font-family: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+em {
+    font-style: italic;
+}
+</style>
+
+<script>
+function unlock(id, password, value) {
+    if (password.value === value) {
+        document.getElementById(id).style.display = "block";
+    } else {
+        alert("Dostęp zabroniony");
+    }
+}
+</script>
+
+</head>
 <body>
 
-<h1>Raport obserwacyjny 02</h1>
+<h1>DOSTĘP OGRANICZONY</h1>
+<p>Wprowadź klucz dostępu.</p>
 
-<div class="meta">
-Autor: Karl F.<br>
-Obiekt: E-277<br>
-Status: obserwacja rozszerzona
+<div class="box">
+<input type="password" id="p1">
+<button onclick="unlock('r1', p1, 'CCLXXVII')">Potwierdź</button>
 </div>
 
+<!-- RAPORT 1 -->
+
+<div id="r1" class="box hidden">
+<h2>RAPORT 1</h2>
+<p><strong>Autor:</strong> Karl F.</p>
+<p><strong>Status:</strong> odkrycie</p>
+
 <p>
-Obiekt E-277 wykazuje stabilność wyłącznie w warunkach pośredniej izolacji, co uznałem za pierwszy realny punkt kontroli<strong>r</strong>.
+Obiekt E-277 został po raz pierwszy zarejestrowany jako anomalia unosząca się nad powierzchnią gruntu.
 </p>
 
 <p>
-Reakcje struktury na obecność personelu nie są gwałtowne, lecz wyraźnie zależne od liczby obserwatorów w pomieszczeniu<strong>o</strong>.
+Struktura była widoczna gołym okiem, choć jej granice pozostawały trudne do jednoznacznego określenia.
 </p>
 
 <p>
-Zmiany nie są rejestrowane przez aparaturę pomiarową ani sensory biologiczne, co sugeruje mechanizm spoza znanych procesów<strong>z</strong>.
+Obserwacja początkowa wzbudziła entuzjazm zespołu badawczego, w tym również mój własny.
 </p>
 
 <p>
-Personel raportuje narastające problemy z koncentracją oraz krótkotrwałe zaburzenia pamięci, prowadzące do błędów proceduralnych<strong>p</strong>.
+Obiekt nie reagował na bodźce mechaniczne ani świetlne, co uznano za zachowanie pasywne.
 </p>
 
 <p>
-Uczucie dezorientacji pojawia się nawet po krótkim kontakcie pośrednim, bez wyraźnych objawów fizycznych<strong>u</strong>.
+Na tym etapie nie odnotowano zagrożenia dla personelu.
+</p>
+
+<hr>
+
+<p><em>Klucz do kolejnego raportu wymagany.</em></p>
+
+<input type="password" id="p2">
+<button onclick="unlock('r2', p2, 'obserwowany')">Potwierdź</button>
+</div>
+
+<!-- RAPORT 2 -->
+
+<div id="r2" class="box hidden">
+<h2>RAPORT 2</h2>
+<p><strong>Autor:</strong> Karl F.</p>
+<p><strong>Status:</strong> obserwacja ciągła</p>
+
+<p>
+Obiekt E-277 wykazuje stabilność wyłącznie w warunkach pośredniej izolacji, co <em>r</em>aczej nie było przewidziane w pierwotnych założeniach.
 </p>
 
 <p>
-Struktura obiektu wydaje się tracić spójność w trakcie obserwacji, jednak proces ten przebiega powoli i bez oznak destabilizacji<strong>s</strong>.
+Reakcje struktury na obecność personelu pozostają subtelne, lecz <em>o</em>becność większej liczby obserwatorów wpływa na zachowanie obiektu.
 </p>
 
 <p>
-Zjawisko nie posiada odpowiednika w znanych procesach chemicznych ani biologicznych, co utrudnia jego klasyfikację<strong>z</strong>.
+Zmiany nie są rejestrowane przez aparaturę pomiarową ani sensory biologiczne, <em>z</em>atem mechanizm musi wykraczać poza znane procesy.
 </p>
 
 <p>
-Część zespołu sugeruje zmianę kategorii zagrożenia, mimo braku bezpośrednich oznak agresji ze strony obiektu<strong>c</strong>.
+Personel raportuje narastające problemy z koncentracją oraz <em>p</em>rzypadki krótkotrwałych zaburzeń pamięci.
 </p>
 
 <p>
-Zalecenia dotyczące izolacji stają się coraz trudniejsze do utrzymania z powodów logistycznych oraz psychologicznych<strong>z</strong>.
+Uczucie dezorientacji pojawia się nawet po krótkiej ekspozycji pośredniej, <em>u</em>trzymując się dłużej niż przewidywano.
 </p>
 
 <p>
-Decyzja o zakończeniu obserwacji została odrzucona przez instancję nadrzędną bez podania przyczyn<strong>e</strong>.
+Struktura obiektu wydaje się tracić spójność w trakcie obserwacji, <em>s</em>zczególnie przy zwiększonej aktywności zespołu.
 </p>
 
 <p>
-Nie wydano zgody na anihilację ani neutralizację obiektu, mimo rosnących obaw części personelu<strong>n</strong>.
+Zjawisko nie posiada odpowiednika w znanych procesach chemicznych ani biologicznych, <em>z</em> tego powodu klasyfikacja pozostaje niepewna.
 </p>
 
 <p>
-Instancja decyzyjna nie przekazała dalszych wytycznych, pozostawiając odpowiedzialność po stronie zespołu badawczego<strong>i</strong>.
+Część zespołu sugeruje zmianę kategorii zagrożenia, <em>c</em>hoć brak bezpośrednich oznak agresji.
 </p>
 
 <p>
-E-277 nie wykazuje wrogości wobec infrastruktury ani obserwatorów, co dodatkowo komplikuje ocenę ryzyka<strong>e</strong>.
+Zalecenia dotyczące izolacji stają się coraz trudniejsze do utrzymania, <em>z</em> uwagi na obciążenie psychiczne personelu.
 </p>
 
-<div class="locked">
-<h2>Dostęp ograniczony</h2>
-<p>Wprowadź klucz obserwacyjny, aby uzyskać dostęp do kolejnej dokumentacji.</p>
+<p>
+Decyzja o zakończeniu obserwacji została odrzucona, <em>e</em>widentnie bez pełnej analizy raportów.
+</p>
 
-<input type="password" placeholder="klucz dostępu">
+<p>
+Nie wydano zgody na anihilację ani neutralizację obiektu, <em>n</em>awet po pierwszych incydentach neurologicznych.
+</p>
+
+<p>
+Instancja decyzyjna nie przekazała dalszych wytycznych, <em>i</em> pozostawiła odpowiedzialność po stronie zespołu.
+</p>
+
+<p>
+E-277 nie wykazuje wrogości wobec obserwatorów, <em>e</em>wentualnie jedynie wpływ pośredni.
+</p>
+
+<p><em>Dalsza dokumentacja wymaga kolejnego klucza.</em></p>
 </div>
 
 </body>
