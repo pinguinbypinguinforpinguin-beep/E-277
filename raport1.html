@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Raport 1 — E-277</title>
+
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 40px;
+}
+
+.report {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+}
+
+.lock {
+    margin-top: 40px;
+    border-top: 1px solid #00ffcc;
+    padding-top: 20px;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="report">
+<h1>RAPORT 1</h1>
+<h3>Autor: Karl Fer</h3>
+
+<p><b>O</b>d momentu rozpoczęcia dyżuru w sektorze E-277 zauważyłem anomalię, której nie potrafię jednoznacznie sklasyfikować.</p>
+<p><b>B</b>yła widoczna jedynie pośrednio, jakby nie chciała zostać w pełni zarejestrowana.</p>
+<p><b>S</b>przęt pomiarowy reagował niespójnie, mimo że wcześniej był w pełni sprawny.</p>
+<p><b>E</b>kscytacja odkryciem przeważała nad ostrożnością, ponieważ obiekt nie wykazywał wrogich cech.</p>
+<p><b>R</b>acjonalne wyjaśnienia szybko przestały wystarczać, gdy wyniki zaczęły się powtarzać.</p>
+<p><b>W</b>szystkie próby dokładniejszego zbliżenia się kończyły się uczuciem niepokoju, trudnym do opisania.</p>
+<p><b>O</b>bserwując zjawisko przez dłuższy czas, zacząłem odnosić wrażenie, że reaguje na moją obecność.</p>
+<p><b>W</b>ciąż nie potrafię określić, czy to tylko projekcja, czy realna zależność.</p>
+<p><b>A</b>nalizę przerwano zgodnie z procedurą, choć nie czuję, by było to konieczne.</p>
+<p><b>N</b>a tym etapie zalecam dalszą obserwację przy zachowaniu ostrożności.</p>
+<p><b>Y</b>dentifikacja obiektu pozostaje otwarta.</p>
+
+<div class="lock">
+<h3>Dostęp do Raportu 2</h3>
+<p>Wprowadź klucz:</p>
+<input id="key" type="text">
+<br>
+<button onclick="check()">POTWIERDŹ</button>
+<p id="msg"></p>
+</div>
+</div>
+
+<script>
+function check() {
+    const key = document.getElementById("key").value.toLowerCase();
+    const msg = document.getElementById("msg");
+
+    if (key === "obserwowany") {
+        window.location.href = "raport2.html";
+    } else {
+        msg.textContent = "BŁĘDNY KLUCZ";
+    }
+}
+</script>
+
+</body>
+</html>
