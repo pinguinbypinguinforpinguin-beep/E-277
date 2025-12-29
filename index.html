@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>DOSTĘP OGRANICZONY</title>
-  <style>
-    body {
-      background: black;
-      color: #00ffcc;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .box {
-      border: 1px solid #00ffcc;
-      padding: 20px;
-      text-align: center;
-    }
-    input {
-      background: black;
-      border: 1px solid #00ffcc;
-      color: #00ffcc;
-      margin-top: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>DOSTĘP OGRANICZONY</title>
+
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    border: 1px solid #00ffcc;
+    padding: 30px;
+    text-align: center;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
+<div class="box">
     <h1>DOSTĘP OGRANICZONY</h1>
     <p>Wprowadź klucz:</p>
-    <input type="text" placeholder="KLUCZ">
-  </div>
-  <script>
-const input = document.querySelector("input");
+    <input id="key" type="text" placeholder="KLUCZ">
+    <br>
+    <button onclick="checkKey()">POTWIERDŹ</button>
+    <p id="msg"></p>
+</div>
 
-input.addEventListener("keydown", function(e) {
-  if (e.key === "Enter") {
-    if (input.value === "CCLXXVII") {
-      document.body.innerHTML = `
-        <div class="box">
-          <h1>RAPORT 1</h1>
-          <p>Obiekt E-277 został odkryty przypadkowo.<br>
-          Jego struktura nie odpowiada żadnej znanej formie życia.<br>
-          Obserwatorzy zgłaszają niepokój.</p>
-        </div>
-      `;
+<script>
+function checkKey() {
+    const key = document.getElementById("key").value;
+    const msg = document.getElementById("msg");
+
+    if (key === "CCLXXVII") {
+        window.location.href = "raport1.html";
     } else {
-      alert("BRAK AUTORYZACJI");
-      input.value = "";
+        msg.textContent = "BŁĘDNY KLUCZ";
     }
-  }
-});
+}
 </script>
 
 </body>
