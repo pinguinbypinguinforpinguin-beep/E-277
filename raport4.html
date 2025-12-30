@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Raport 4 — E-277</title>
 
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 40px;
+}
+
+.report {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+}
+
+.lock {
+    margin-top: 40px;
+    border-top: 1px solid #00ffcc;
+    padding-top: 20px;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h1>RAPORT 4</h1>
+
+<p><strong>Autor:</strong> Karl F.</p>
+<p><strong>Status:</strong> destabilizacja zespołu</p>
+
+<p>
+Po zdarzeniach opisanych w Raporcie 3 dalsze procedury zostały formalnie
+utrzymane, jednak faktyczna kontrola nad przebiegiem obserwacji uległa
+osłabieniu.
+</p>
+
+<p>
+Największe zmiany zaobserwowano u technika Braiana J.
+</p>
+
+<p>
+Braian przestał stosować się do ustalonego harmonogramu.
+Często pojawiał się w pobliżu obiektu bez zgłoszenia,
+tłumacząc to „potrzebą sprawdzenia”.
+</p>
+
+<p>
+Podczas jednej z takich sytuacji zapytałem go wprost,
+czy rozumie ryzyko dalszej ekspozycji.
+</p>
+
+<p>
+Odpowiedział bez wahania:
+</p>
+
+<p style="text-align:center; font-size:1.1em;">
+<strong>„To chce nam pomóc.”</strong>
+</p>
+
+<p>
+Tym razem wypowiedź nie brzmiała jak przypuszczenie.
+Raczej jak stwierdzenie faktu.
+</p>
+
+<p>
+Braian twierdził, że obiekt reaguje na obecność w sposób selektywny.
+Nie na ruch, nie na dźwięk, lecz na intencję.
+</p>
+
+<p>
+Zapytałem, skąd ta pewność.
+Odpowiedział, że „to się czuje”.
+</p>
+
+<p>
+Od tego momentu zacząłem unikać przebywania sam na sam z E-277.
+Nie potrafię uzasadnić tej decyzji logicznie.
+</p>
+
+<p>
+Pozostali członkowie zespołu zgłaszali trudności z koncentracją,
+nagłe poczucie obserwowania oraz sny,
+których treści nie byli w stanie opisać.
+</p>
+
+<p>
+Nie zgłoszono strat materialnych.
+Nie zgłoszono uszkodzeń strukturalnych.
+</p>
+
+<p>
+Dopiero teraz rozumiem,
+że problemem nie jest brak kontroli.
+</p>
+
+<p>
+Problemem jest to,
+że zaczynamy jej oddawać z własnej woli.
+</p>
+
+<p>
+<i>To nie dla nas.</i>
+</p>
+
+<p>
+Jeżeli pozostaniemy dłużej,
+obiekt przestanie być obserwowany.
+</p>
+
+<p>
+Zacznie być wysłuchiwany.
+</p>
+
+
+<div class="lock">
+<h3>Dostęp do Raportu 5</h3>
+<p>Wprowadź klucz:</p>
+<input id="key" type="text">
+<br>
+<button onclick="check()">POTWIERDŹ</button>
+<p id="msg"></p>
+</div>
+</div>
+
+<script>
+function check() {
+    const key = document.getElementById("key").value.toLowerCase();
+    const msg = document.getElementById("msg");
+
+    if (key === "TO NIE DLA NAS") {
+        window.location.href = "raport5.html";
+    } else {
+        msg.textContent = "BŁĘDNY KLUCZ";
+    }
+}
+</script>
+
+</body>
+</html>
