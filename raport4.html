@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Raport 3 — E-277</title>
+
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 40px;
+}
+
+.report {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+}
+
+.lock {
+    margin-top: 40px;
+    border-top: 1px solid #00ffcc;
+    padding-top: 20px;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h1>RAPORT 3</h1>
+
+<p><strong>Autor:</strong> Karl F.</p>
+<p><strong>Status:</strong> kontakt bezpośredni</p>
+
+<p>
+Decyzja o zbliżeniu się do obiektu E-277 została podjęta po długiej dyskusji
+i braku jednoznacznych wytycznych ze strony instancji nadrzędnej.
+</p>
+
+<p>
+Uznano, że dalsza obserwacja pośrednia nie przynosi nowych danych,
+a ryzyko pozostaje na akceptowalnym poziomie.
+</p>
+
+<p>
+Kontakt bezpośredni nastąpił bez użycia narzędzi mechanicznych.
+W pomieszczeniu obecny był również technik Braian J.
+</p>
+
+<p>
+Obiekt nie wykazał reakcji natychmiastowej.
+Braian podszedł bliżej, zanim zdążyłem wydać polecenie cofnięcia się.
+</p>
+
+<p>
+Po kilku sekundach zaobserwowano zmiany w strukturze materii organicznej
+znajdującej się w bezpośrednim sąsiedztwie E-277.
+</p>
+
+<p>
+Proces nie przypominał spalania, rozpadu ani rozkładu chemicznego.
+Materia ulegała stopniowemu zanikowi, jakby traciła spójność.
+</p>
+
+<p>
+Braian nie zgłaszał bólu ani dyskomfortu.
+Wręcz przeciwnie — wydawał się zaskakująco spokojny.
+</p>
+
+<p>
+W trakcie obserwacji powiedział cicho:
+<br>
+<strong>„To chce nam pomóc.”</strong>
+</p>
+
+<p>
+Wypowiedź została uznana za efekt stresu lub sugestii.
+Nie przerwano procedury.
+</p>
+
+<p>
+W tym momencie pojawiło się trudne do opisania wrażenie,
+że obiekt nie reaguje na ciało, lecz na sam fakt obecności życia.
+</p>
+
+<p>
+Część personelu opuściła pomieszczenie bez polecenia.
+Nie próbowałem ich zatrzymywać.
+</p>
+
+<p>
+Po zakończeniu ekspozycji pozostała przestrzeń,
+w której wcześniej znajdował się organizm testowy.
+Braian odmówił dalszych komentarzy.
+</p>
+
+<p>
+Nie potrafię jednoznacznie stwierdzić,
+czy był to akt oddziaływania, czy komunikacji.
+</p>
+
+<p>
+Obiekt E-277 pozostaje stabilny.
+Ja — mniej.
+</p>
+
+<p>
+Dalsza dokumentacja wymaga kolejnego klucza.
+</p>
+
+
+<div class="lock">
+<h3>Dostęp do Raportu 4</h3>
+<p>Wprowadź klucz:</p>
+<input id="key" type="text">
+<br>
+<button onclick="check()">POTWIERDŹ</button>
+<p id="msg"></p>
+</div>
+</div>
+
+<script>
+function check() {
+    const key = document.getElementById("key").value.toLowerCase();
+    const msg = document.getElementById("msg");
+
+    if (key === "TO CHCE NAM POMÓC") {
+        window.location.href = "raport4.html";
+    } else {
+        msg.textContent = "BŁĘDNY KLUCZ";
+    }
+}
+</script>
+
+</body>
+</html>
