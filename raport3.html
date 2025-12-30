@@ -135,15 +135,16 @@ Dalsza dokumentacja wymaga kolejnego klucza.
 
 <script>
 function check() {
-    const key = document.getElementById("key").value.toLowerCase();
-    const msg = document.getElementById("msg");
+  const key = document.getElementById("key").value.toLowerCase().trim();
+  const msg = document.getElementById("msg");
 
-    if (key === "TO CHCE NAM POMÓC") {
-        window.location.href = "raport4.html";
-    } else {
-        msg.textContent = "BŁĘDNY KLUCZ";
-    }
+  if (key === "to chce nam pomóc") {
+    window.location.href = "raport4.html";
+  } else {
+    msg.textContent = "BŁĘDNY KLUCZ";
+  }
 }
+
 </script>
 
 </body>
