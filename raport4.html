@@ -141,9 +141,12 @@ Zacznie być wysłuchiwany.
 </div>
 
 <script>
+<script>
 function check() {
-    const key = document.getElementById("key").value.toLowerCase().trim;
+    const input = document.getElementById("key");
     const msg = document.getElementById("msg");
+
+    const key = input.value.trim().toLowerCase();
 
     if (key === "to nie dla nas") {
         window.location.href = "raport5.html";
@@ -151,6 +154,8 @@ function check() {
         msg.textContent = "BŁĘDNY KLUCZ";
     }
 }
+</script>
+
 </script>
 
 </body>
