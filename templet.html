@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Raport 1 — E-277</title>
+
+<style>
+body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 40px;
+}
+
+.report {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #00ffcc;
+    padding: 30px;
+}
+
+.lock {
+    margin-top: 40px;
+    border-top: 1px solid #00ffcc;
+    padding-top: 20px;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-family: monospace;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="lock">
+<h3>Dostęp do Raportu </h3>
+<p>Wprowadź klucz:</p>
+<input id="key" type="text">
+<br>
+<button onclick="check()">POTWIERDŹ</button>
+<p id="msg"></p>
+</div>
+</div>
+
+<script>
+function check() {
+    const key = document.getElementById("key").value.toLowerCase();
+    const msg = document.getElementById("msg");
+
+    if (key === "") {
+        window.location.href = "raport.html";
+    } else {
+        msg.textContent = "BŁĘDNY KLUCZ";
+    }
+}
+</script>
+
+</body>
+</html>
