@@ -142,10 +142,10 @@ Zacznie być wysłuchiwany.
 
 <script>
 function check() {
-    const key = document.getElementById("key").value.toLowerCase();
+    const key = document.getElementById("key").value.toLowerCase().trim;
     const msg = document.getElementById("msg");
 
-    if (key === "TO NIE DLA NAS") {
+    if (key === "to nie dla nas") {
         window.location.href = "raport5.html";
     } else {
         msg.textContent = "BŁĘDNY KLUCZ";
